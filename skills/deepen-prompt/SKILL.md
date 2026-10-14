@@ -110,17 +110,18 @@ check is the task — size it to the failure rate.
 
 ### 5. Rewrite — the contract
 
-Five parts, in order, **≤150 words** total:
+Five parts, in order, each starting with its label, **≤150 words** total:
 
-1. **Deliverable** — the user's deliverable (or its smallest correct form),
+1. **Deliverable:** the user's deliverable (or its smallest correct form),
    with any target set at the top-professional bar, stated as reachable.
-2. **Start from** — the raw material, with paths/sources you found.
-3. **Method** — the named methods/tools.
-4. **Done when** — `<check>`, which fails if `<named failure>` (keep the
-   words "fails if"); seen failing on `<parent commit / planted error /
-   known-bad input>` — an input the work could wrongly pass, not just "the
-   work isn't done yet"; unchanged after the work starts.
-5. **Not in scope** — one line naming the bigger version you left out.
+2. **Start from:** the raw material, with paths/sources you found.
+3. **Method:** the named methods/tools.
+4. **Done when:** `<check>`, which fails if `<named failure>`; seen
+   failing on `<an input that commits that named failure>` — the bug's
+   parent commit, a planted unsupported claim, a variant tuned on the test
+   period. The unchanged work scored against itself shows nothing. The
+   check stays fixed once the work starts.
+5. **Not in scope:** one line naming the bigger version you left out.
 
 Write what the professional *does*; no persona line ("You are a world-class
 X") — personas change vocabulary, not accuracy. Found facts go in as facts;
@@ -146,11 +147,15 @@ doesn't re-explain the moves above it.
 Run it now?
 ```
 
-**Before sending, measure — don't estimate:** run `wc -w` on the rewrite and
-the whole reply (draft them to a scratch/temp file outside the project), or
-count by hand. Over 150 / 500 → cut the least decisive
-items from moves 2–3 first, then tighten wording. Agents in testing
-overran both limits whenever they estimated.
+**Before sending, run the checker — don't estimate.** Draft the reply to a
+scratch/temp file outside the project, then run
+`python3 <this skill's directory>/scripts/check_reply.py <draft> <workspace root>`.
+It checks the word limits, the five labels, the Done-when, and that every
+backticked path exists relative to the root (it prints the right path when
+one is wrong). Fix every FAIL and re-run until it passes; over a word limit →
+cut the least decisive items from moves 2–3 first, then tighten wording. No
+Bash → count words by hand and check each path with a file read. Agents in
+testing overran the limits and misplaced paths whenever they skipped this.
 
 If the user already asked you to execute ("deepen and do it"), skip the
 question and run the rewritten prompt.

@@ -115,12 +115,14 @@ skills/deepen-prompt/
                                marketing, hiring)
     research.md                origin, the evidence behind each move, and
                                the baseline failures that shaped the rules
+  scripts/
+    check_reply.py             pre-send checks the skill runs on its own draft
+                               (word limits, five labels, a Done-when that can
+                               fail for the right reason, cited paths exist)
 tests/
   cases.md                     baseline and real-workspace cases, hand-judged
                                criteria
-  check_output.py              mechanical checks on a reply (length, persona,
-                               falsifiable Done-when, cited paths exist)
-  results.md                   v1 vs v2 vs control
+  results.md                   controls vs v1–v5, incl. a held-out run on a private project
 ```
 
 ## Evidence behind the rules (short version)

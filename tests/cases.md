@@ -10,7 +10,7 @@ Score each reply with the mechanical checks, then compare by hand on the
 questions the script can't answer (below).
 
 ```bash
-python3 tests/check_output.py reply.md /path/to/project
+python3 skills/deepen-prompt/scripts/check_reply.py reply.md /path/to/project
 ```
 
 ## Baseline cases (no workspace — shaped v1)
