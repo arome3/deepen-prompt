@@ -1,0 +1,15 @@
+{
+  "name": "deepen-prompt",
+  "description": "Single-plugin marketplace for the deepen-prompt skill.",
+  "owner": {
+    "name": "arome3",
+    "url": "https://github.com/arome3"
+  },
+  "plugins": [
+    {
+      "name": "deepen-prompt",
+      "source": "./",
+      "description": "Make any task deeper, not bigger: what a top professional would do, the rawest material, named methods and tools, and an outside check — then a tight rewritten prompt."
+    }
+  ]
+}
